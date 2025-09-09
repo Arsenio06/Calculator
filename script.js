@@ -20,7 +20,7 @@ function calculate() {
         // Замість звичайного додавання використовується конкатенація рядків
         if (expression.includes('+')) {
             let parts = expression.split('+');
-            let result = parts[0] + parts[1]; // Це конкатенація, не додавання!
+            let result = parseFloat(parts[0]) + parseFloat(parts[1]); // Це конкатенація, не додавання!
             display.value = result;
         } else {
             // Для інших операцій використовуємо eval (не рекомендується в продакшні)
